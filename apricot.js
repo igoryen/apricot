@@ -3,12 +3,12 @@
 
 var http = require("http"); // 1
 http.createServer(function (request, response) { // 2
-   request.on("end", function () { // 3
+   //request.on("end", function () { // 3
       response.writeHead(200, { // 4
          'Content-Type': 'text/plain' // 7
       });
       response.end('Apricot: Hello HTTP!'); // 5
-   });
+   //});
 }).listen(8080); // 6
 console.log('Server listening. (http://localhost:8080)'); // 8
 
