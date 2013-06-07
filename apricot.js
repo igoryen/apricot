@@ -27,6 +27,7 @@ console.log('Server listening. (http://localhost:8080/?data=put_some_text_here)'
  4) response.writeHead() to write headers to the response.
     200 is HTTP status code (this one means success)
  5) response.end() - to (1) send data and (2) to end response.
+    _get['data'] - will have data that you set in URL. e.g. /?data=hello
  6) http.createServer().listen() - to listen on the 8080 port.
  7) Second parameter, holds header fields in object
     Content-Type is 'text/plain' because we are sending plain text
