@@ -13,7 +13,7 @@ http.createServer(function (request, response) { // 2
       response.end('Here is your data: ' + _get['data']); // 5
    //});
 }).listen(8080); // 6
-console.log('Server listening. (http://localhost:8080)'); // 8
+console.log('Server listening. (http://localhost:8080/?data=put_some_text_here)'); // 8
 
 /*
  =================================================================
@@ -32,7 +32,8 @@ console.log('Server listening. (http://localhost:8080)'); // 8
     Content-Type is 'text/plain' because we are sending plain text
  8) console.log() - to get this text to show up in the terminal
  9) and url module, which is very helpful in parsing request parameters. 
- 10) Parse the request for arguments and store them in _get variable.
-     This function parses the url from request and returns object representati
+ 10) url.parse() - to parse the request for arguments and store them in _get variable.
+     This function parses the url from request and returns (converts to) object representation.
+     url.parse().query - the return object has .query property
 
 */
